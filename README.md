@@ -42,7 +42,7 @@ A comprehensive Angular Material boilerplate application with code splitting, dy
 
 ## Project Structure
 
-angular-material-boilerplate/
+angular-material-boilerplate
 ├── src/
 │   ├── app/
 │   │   ├── core/                  # Core module (services, guards, interceptors)
