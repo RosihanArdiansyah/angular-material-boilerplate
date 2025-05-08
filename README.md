@@ -209,7 +209,6 @@ To add a new feature/menu to the application:
       exports: [RouterModule]
     })
     export class ProductsRoutingModule { }
-    \`\`\`
 
   4. Update the feature module to import necessary modules (src/app/features/products/products.module.ts):
 
@@ -230,7 +229,6 @@ To add a new feature/menu to the application:
       ]
     })
     export class ProductsModule { }
-    \`\`\`
 
   5. Update the main routing module (src/app/app-routing.module.ts):
 
@@ -238,7 +236,6 @@ To add a new feature/menu to the application:
       path: 'products',
       loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule)
     },
-    \`\`\`
 
   6. Add the new menu item to the sidebar in app.component.html
 
@@ -252,7 +249,6 @@ To deploy the application using Docker:
 1. Build and run with Docker Compose:
 2. ```
    docker-compose up -d
-   \`\`\`
 
 3. With custom configuration:
    ```
