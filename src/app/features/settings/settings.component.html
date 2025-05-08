@@ -1,0 +1,61 @@
+<div class="settings-container">
+  <h1>Settings</h1>
+  
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Application Settings</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Application Name</mat-label>
+          <input matInput placeholder="Enter application name">
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Admin Email</mat-label>
+          <input matInput placeholder="Enter admin email" type="email">
+        </mat-form-field>
+        
+        <div class="button-row">
+          <button mat-raised-button color="primary">Save Settings</button>
+          <button mat-button>Reset</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="settings-container">
+  <h1>Application Settings</h1>
+  
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>General Settings</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Application Name</mat-label>
+          <input matInput placeholder="Enter application name">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>API URL</mat-label>
+          <input matInput placeholder="Enter API URL">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Theme</mat-label>
+          <mat-select>
+            <mat-option value="light">Light</mat-option>
+            <mat-option value="dark">Dark</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Save Settings</button>
+      <button mat-button>Reset</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Import pre-built theme
+@import '@angular/material/prebuilt-themes/azure-blue.css';
+
+// Custom CSS variables for Azure blue
+:root {
+  --azure-blue: #0078d4;
+  --azure-blue-light: #0091ea;
+  --azure-blue-dark: #005a9e;
+}
+
+// Override specific components with Azure blue
+.mat-toolbar.mat-primary {
+  background-color: var(--azure-blue) !important;
+  color: white !important;
+}
+
+// Global styles
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-list-item {
+    .mdc-list-item__primary-text {
+      color: white !important;
+    }
+  }

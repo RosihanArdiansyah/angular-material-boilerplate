@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${APP_NAME:-angular-material-boilerplate}
+    ports:
+      - \"${PORT:-80}:80\"
+    environment:
+      - API_URL=${API_URL:-/api}
+      - APP_NAME=${APP_NAME:-Angular Material Boilerplate}

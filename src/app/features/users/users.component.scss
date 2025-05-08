@@ -1,0 +1,42 @@
+.users-container {
+  padding: 20px;
+  
+  .users-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    h1 {
+      margin: 0;
+    }
+  }
+  
+  .filter-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    
+    table {
+      width: 100%;
+    }
+    
+    .mat-column-actions {
+      width: 120px;
+      text-align: center;
+    }
+  }
+  
+  .active-status {
+    color: #4caf50;
+    font-weight: 500;
+  }
+  
+  .inactive-status {
+    color: #f44336;
+    font-weight: 500;
+  }
+}
