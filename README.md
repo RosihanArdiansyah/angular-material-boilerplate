@@ -42,7 +42,6 @@ A comprehensive Angular Material boilerplate application with code splitting, dy
 
 ## Project Structure
 
-\`\`\`
 angular-material-boilerplate/
 ├── src/
 │   ├── app/
@@ -70,7 +69,6 @@ angular-material-boilerplate/
 ├── docker-compose.yml
 ├── .dockerignore
 └── README.md
-\`\`\`
 
 ## Using the CRUD Service
 
