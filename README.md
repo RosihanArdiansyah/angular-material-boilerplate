@@ -23,26 +23,27 @@ A comprehensive Angular Material boilerplate application with code splitting, dy
 ### Installation
 
 1. Clone the repository:
-   \`\`\`bash
+   ```
    git clone https://github.com/yourusername/angular-material-boilerplate.git
    cd angular-material-boilerplate
-   \`\`\`
+   ```
 
 2. Install dependencies:
-   \`\`\`bash
+    ```
    npm install
-   \`\`\`
+   ```
 
 3. Start the development server:
-   \`\`\`bash
+   ```
    ng serve
-   \`\`\`
+   ```
 
 4. Open your browser and navigate to \`http://localhost:4200\`
 
 ## Project Structure
 
 angular-material-boilerplate
+```
 ├── src/
 │   ├── app/
 │   │   ├── core/                  # Core module (services, guards, interceptors)
@@ -69,12 +70,13 @@ angular-material-boilerplate
 ├── docker-compose.yml
 ├── .dockerignore
 └── README.md
+```
 
 ## Using the CRUD Service
 
 The dynamic CRUD service makes it easy to connect to any API endpoint:
 
-\`\`\`typescript
+```
 // Example usage in a component
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../../core/services/crud.service';
@@ -118,14 +120,14 @@ export class UserListComponent implements OnInit {
   
   // And so on for update, delete, etc.
 }
-\`\`\`
+```
 
 
 ## Using auth service
 
 The auth service makes it easy to connect to any API endpoint:
 
-\`\`\`typescript
+```
 // Example usage in a component
 // Example usage in a component
 import { Component } from '@angular/core';
@@ -175,25 +177,25 @@ export class LoginComponent {
     );
   }
 }
-\`\`\`
+```
 
 ## Add new menu and routing
 
 To add a new feature/menu to the application:
 
   1. Create a new feature module:
-    ```bash
+    ```
     ng generate module features/products --routing
     ```
   2. Create the main component for the feature:
-    ```bash
+    ```
     ng generate component features/products/products
     ```
   3. Update the feature routing module (src/app/features/products/products-routing.module.ts):
-   \`\`\`typescript
-    import { NgModule } from '@angular/core';
-    import { RouterModule, Routes } from '@angular/router';
-    import { ProductsComponent } from './products.component';
+    
+    import { NgModule } from '@angular/core'
+    import { RouterModule, Routes } from '@angular/router'
+    import { ProductsComponent } from './products.component'
 
     const routes: Routes = [
       {
@@ -210,8 +212,6 @@ To add a new feature/menu to the application:
     \`\`\`
 
   4. Update the feature module to import necessary modules (src/app/features/products/products.module.ts):
-
-    \`\`\`typescript
 
     import { NgModule } from '@angular/core';
     import { CommonModule } from '@angular/common';
@@ -234,8 +234,6 @@ To add a new feature/menu to the application:
 
   5. Update the main routing module (src/app/app-routing.module.ts):
 
-    \`\`\`typescript
-
     {
       path: 'products',
       loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule)
@@ -244,9 +242,7 @@ To add a new feature/menu to the application:
 
   6. Add the new menu item to the sidebar in app.component.html
 
-    \`\`\`html
     <a mat-list-item routerLink="/products" routerLinkActive="active-link">Products</a>
-     \`\`\`
 
  
 ## Docker Deployment
@@ -254,14 +250,14 @@ To add a new feature/menu to the application:
 To deploy the application using Docker:
 
 1. Build and run with Docker Compose:
-   \`\`\`bash
+2. ```
    docker-compose up -d
    \`\`\`
 
-2. With custom configuration:
-   \`\`\`bash
+3. With custom configuration:
+   ```
    APP_NAME=\"My Custom App\" API_URL=\"https://api.example.com\" PORT=8080 docker-compose up -d
-   \`\`\`
+   ```
 
 ## Authentication Integration
 
